@@ -1,0 +1,24 @@
+package Lb5;
+
+import java.util.Scanner;
+
+public class Lab5 {
+
+    public static void main(String[] args) {
+      try (Scanner scanner = new Scanner(System.in)) {
+
+        System.out.print("Введите первое число: ");
+        int dividend = scanner.nextInt();
+
+        System.out.print("Введите второе число: ");
+        int divisor = scanner.nextInt();
+
+        try {
+            int result = dividend / divisor;
+            System.out.println("Результат: " + result);
+        } catch (ArithmeticException ex) {
+            System.out.println("Нельзя делить на ноль.");
+        }
+    }
+}
+}
